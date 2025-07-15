@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AutoAI Annotation Demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script defer src="scripts.js"></script>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      background-image: url('https://images.unsplash.com/photo-1604079628041-8d3bbdcd0ac3?ixlib=rb-4.0.3&auto=format&fit=crop&w=3840&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header with background image -->
+<header class="bg-cover bg-center bg-no-repeat bg-opacity-90 text-white py-12 text-center" style="background-image: url('https://images.unsplash.com/photo-1604079628041-8d3bbdcd0ac3?ixlib=rb-4.0.3&auto=format&fit=crop&w=3840&q=80');">
+  <h1 class="text-4xl font-bold drop-shadow-lg">AutoAI Car Data Annotation</h1>
+  <p class="mt-2 text-lg drop-shadow">Click each button to view annotation types</p>
+</header>
+
+<!-- Info Section: What is Data Annotation -->
+<section class="bg-black bg-opacity-70 py-12 px-6 max-w-5xl mx-auto rounded shadow-lg">
+  <h2 class="text-3xl font-semibold mb-4">What is Data Annotation?</h2>
+  <p class="text-lg leading-relaxed">
+    Data annotation is the process of labeling data—such as images, video, text, or audio—so that AI models can learn from it. In the context of self-driving cars or automotive AI, data annotation includes tasks like drawing bounding boxes around vehicles, labeling lane lines, identifying pedestrians, and creating 3D object annotations.
+  </p>
+  <p class="mt-4 text-lg">
+    Accurate annotation ensures machine learning models can detect and interpret objects in real-world environments. Our AutoAI platform specializes in high-quality annotation tools for bounding boxes, polygons, and 3D boxes, enhancing autonomous vehicle development.
+  </p>
+</section>
+
+<!-- Buttons -->
+<section class="py-12 max-w-4xl mx-auto space-y-8">
+  <div class="flex flex-wrap gap-4 justify-center">
+    <button data-target="bbox"
+      class="bg-blue-600 text-white font-semibold px-6 py-3 rounded shadow-lg transform transition duration-300 hover:-translate-y-1 hover:shadow-blue-500/50 active:translate-y-0.5 active:shadow-inner">
+      Show Bounding Boxes
+    </button>
+    <button data-target="polygon"
+      class="bg-green-600 text-white font-semibold px-6 py-3 rounded shadow-lg transform transition duration-300 hover:-translate-y-1 hover:shadow-green-500/50 active:translate-y-0.5 active:shadow-inner">
+      Show Polygon Masks
+    </button>
+    <button data-target="3dbox"
+      class="bg-purple-600 text-white font-semibold px-6 py-3 rounded shadow-lg transform transition duration-300 hover:-translate-y-1 hover:shadow-purple-500/50 active:translate-y-0.5 active:shadow-inner">
+      Show 3D Boxes
+    </button>
+    <button data-target="demo"
+      class="bg-pink-600 text-white font-semibold px-6 py-3 rounded shadow-lg transform transition duration-300 hover:-translate-y-1 hover:shadow-pink-500/50 active:translate-y-0.5 active:shadow-inner">
+      Watch Annotation Video
+    </button>
+  </div>
+
+  <!-- Media Sections -->
+  <div id="bbox" class="info hidden mt-8">
+    <h2 class="text-2xl font-semibold">Bounding Boxes</h2>
+    <img src="C:\Users\Sairaj\OneDrive\Desktop\New folder (2)\media\images.jpg.jpg" alt="Bounding Boxes" class="mt-4 rounded shadow-md">
+    <p class="mt-2">Highlighted boxes around vehicles for object detection.</p>
+  </div>
+
+  <div id="polygon" class="info hidden mt-8">
+    <h2 class="text-2xl font-semibold">Polygon Masks</h2>
+    <img src="C:\Users\Sairaj\OneDrive\Desktop\New folder (2)\media\3dannotation.jpg.jpg" alt="Polygon Masks" class="mt-4 rounded shadow-md">
+    <p class="mt-2">Precise polygon mask annotations for segmentation.</p>
+  </div>
+
+  <div id="3dbox" class="info hidden mt-8">
+    <h2 class="text-2xl font-semibold">3D Bounding Boxes</h2>
+    <img src="C:\Users\Sairaj\OneDrive\Desktop\New folder (2)\media\screenshot.png.png" alt="3D Bounding Boxes" class="mt-4 rounded shadow-md">
+    <p class="mt-2">Cuboid annotations indicating 3D object orientation.</p>
+  </div>
+
+  <div id="demo" class="info hidden mt-8">
+    <h2 class="text-2xl font-semibold">Video Annotation Demo</h2>
+    <video controls class="mt-4 rounded shadow-md w-full">
+      <source src="C:\Users\Sairaj\OneDrive\Desktop\New folder (2)\media\demo-video.mp4.mp4" type="video/mp4" />
+    </video>
+    <p class="mt-2">Frame-by-frame bounding box tracking demo.</p>
+  </div>
+</section>
+
+<!-- Social Media Marketing Section -->
+<section class="bg-gray-900 py-10 text-center">
+  <h3 class="text-2xl font-semibold mb-4">Follow Us for More Updates</h3>
+  <p class="mb-6">Stay connected on social media and get the latest on AI-powered annotation tools!</p>
+  <div class="flex justify-center gap-6">
+    <a href="https://www.instagram.com/sairaj6907?igsh=MTN5bThoN3Z6cHoxbg==" target="_blank" class="text-pink-500 hover:text-pink-400 text-xl">📸 Instagram</a>
+    <a href="https://www.facebook.com/share/15FCtzUqWK/" target="_blank" class="text-blue-500 hover:text-blue-400 text-xl">📘 Facebook</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-6 text-center">
+  <p>&copy; WEB DEVELOPED BY SAIRAJ6907.</p>
+</footer>
+
+</body>
+</html>
